@@ -1,0 +1,259 @@
+/* Reset some basic styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    color: #fff; /* White text color */
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent dark background */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Section styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    border-radius: 15px;  /* Curved corners */
+    color: white;         /* White text for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Section headers */
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Achievements Section */
+//* Achievements Section */
+#achievements {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+    border-radius: 15px;  /* Rounded corners */
+    margin-top: 20px;
+}
+
+.achievement-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.achievement-box {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;  /* Increased width for better visibility */
+    text-align: center;
+    transition: transform 0.3s ease, opacity 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for box */
+    overflow: hidden; /* Ensures any overflowing content gets clipped */
+    position: relative; /* Position relative for better control of zoom */
+}
+
+.achievement-box:hover {
+    transform: scale(1.1);  /* Slight zoom effect */
+    z-index: 10; /* Ensure the box appears on top of others when zoomed */
+}
+
+.achievement-box:nth-child(odd) {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Styling for Certificate Image */
+.certificate-img {
+    width: 100%;  /* Ensure image takes full width of the box */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px;  /* Prevent image from growing too large */
+    object-fit: cover;  /* Ensures the image fits within the available space */
+    border-radius: 8px;  /* Optional rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for image */
+    margin-top: 15px;
+}
+
+/* Styling for Issued By section */
+.issued-by {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Styling for the View Certificate Link */
+.achievement-box a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0077b5; /* LinkedIn blue color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.achievement-box a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Projects Section */
+#projects {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent dark background */
+}
+
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.project {
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+    width: 45%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);  /* Zoom effect */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent dark background */
+}
+
+.contact-details {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+/* Scroll to top button */
+#scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+#scroll-top-btn:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent dark background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Animation for fade-in effect */
+.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
